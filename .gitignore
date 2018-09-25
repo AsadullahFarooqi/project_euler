@@ -1,6 +1,8 @@
 
 # Created by https://www.gitignore.io/api/linux,python
 
+
+.gitignore
 01_page_1_problems.py
 new.cpp
 sumofsqares.py
