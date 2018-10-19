@@ -4,9 +4,10 @@
 
 .gitignore
 01_page_1_problems.py
+new.c
 new.cpp
 sumofsqares.py
-
+.js
 ### Linux ###
 *~
 

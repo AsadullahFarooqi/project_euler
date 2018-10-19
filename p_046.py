@@ -1,0 +1,5 @@
+
+def conjecture():
+	
+	while True:
+		
