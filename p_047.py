@@ -1,3 +1,20 @@
+"""
+Distinct primes factors
+Problem 47 
+The first two consecutive numbers to have two distinct prime factors are:
+
+14 = 2 × 7
+15 = 3 × 5
+
+The first three consecutive numbers to have three distinct prime factors are:
+
+644 = 2² × 7 × 23
+645 = 3 × 5 × 43
+646 = 2 × 17 × 19.
+
+Find the first four consecutive integers to have four distinct prime factors each. What is the first of these numbers?
+"""
+
 
 def is_prime(x):
 	if x <= 1:
@@ -12,45 +29,34 @@ def is_prime(x):
 				return False
 		return True
 
-
-
 def primes_in_range():
-	
-	# n = 134043
-	n = 374
+	n = 1
 	while True:
 
 		prime_factors_of_f = [x for x in range(1,(n//2)+1) if n % x == 0 and is_prime(x)]
-		n += 1
 		prime_factors_of_s = [x for x in range(1,((n+1)//2)+1) if (n+1) % x == 0 and is_prime(x)]		
-		n += 1
 		prime_factors_of_t = [x for x in range(1,((n+2)//2)+1) if (n+2) % x == 0 and is_prime(x)]
-		n += 1
-		# prime_factors_of_4 = [x for x in range(1,((n+3)//2)+1) if (n+3) % x == 0 and is_prime(x)]
+		prime_factors_of_4 = [x for x in range(1,((n+3)//2)+1) if (n+3) % x == 0 and is_prime(x)]
 
-		if len(set(prime_factors_of_f)) == 3 and len(set(prime_factors_of_s)) == 3 and len(set(prime_factors_of_t)) == 3:
-			print(prime_factors_of_f, " :: ", n-2)
-			print(prime_factors_of_s, " :: ", n-1)
-			print(prime_factors_of_t, " :: ", n)
-			break
-		# if len(set(prime_factors_of_f)) == 4 and len(set(prime_factors_of_s)) == 4 and len(set(prime_factors_of_t)) == 4 and len(set(prime_factors_of_4)) == 4:
-		# 	print(prime_factors_of_f, " :: ", n, n+1)
+		# if len(set(prime_factors_of_f)) == 2 and len(set(prime_factors_of_s)) == 2:
+		# 	print(prime_factors_of_f, " :: ", n)
+		# 	print(prime_factors_of_s, " :: ", n+1)
 		# 	break
-		print(n)
 
+		# if len(set(prime_factors_of_f)) == 3 and len(set(prime_factors_of_s)) == 3 and len(set(prime_factors_of_t)) == 3:
+		# 	print(prime_factors_of_f, " :: ", n)
+		# 	print(prime_factors_of_s, " :: ", n+1)
+		# 	print(prime_factors_of_t, " :: ", n+2)
+		# 	break
 
-	# print("primes : ", primes, " :: ", n)
-# l = []
-# for i in range(1,(n//2)+1):
-# 	print(i)
-# 	if n % i == 0 and is_prime(i):
-# 		l.append(i)
+		if len(set(prime_factors_of_f)) == 4 and len(set(prime_factors_of_s)) == 4 and len(set(prime_factors_of_t)) == 4 and len(set(prime_factors_of_4)) == 4:
+			print(prime_factors_of_f, " :: ", n)
+			print(prime_factors_of_s, " :: ", n+1)
+			print(prime_factors_of_t, " :: ", n+2)
+			print(prime_factors_of_t, " :: ", n+3)
 
-# print(l)
-# n = 644
-# print([x for x in range(1,(n//2)+1) if n % x == 0 and is_prime(x)])
-# n2 = 644
-# print([x for x in range(1,(n2//2)+1) if n2 % x == 0 and is_prime(x)])
-# n3 = 644
-# print([x for x in range(1,(n3//2)+1) if n3 % x == 0 and is_prime(x)])
-primes_in_range()
+			break
+		n += 1
+
+if __name__ == '__main__':
+	primes_in_range()
