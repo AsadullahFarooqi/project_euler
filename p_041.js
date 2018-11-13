@@ -38,3 +38,23 @@ function compute_answer(){
 }
 
 compute_answer()
+
+// function F(num){
+// 	// # ans = 0
+// 	// # for num in range(1, lim):
+// 	for (let i=2;  i <= Math.ceil(Math.sqrt(num)) + 1; i++){
+// 		for (let j=2; j <= Math.ceil(num**0.33333) + 1; j++){
+// 			if (((i**2) * (j**3)) == num) return true
+// 		}
+// 	}
+// 	return false
+// }
+
+// var ans = 0
+// for (let i=20000; i <=3000000 ; i++){
+// 	if (is_prime(i)) continue
+// 	if (F(i)) ans += 1
+// 	console.log(i)
+// }
+// // # F(9*(10**18))
+// console.log(ans+130)
